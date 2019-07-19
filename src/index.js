@@ -12,4 +12,4 @@ ReactDOM.render(
   </HashRouter>,
   document.getElementById('root')
 )
-serviceWorker.unregister()
+serviceWorker.register()
