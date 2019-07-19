@@ -16,7 +16,7 @@ class SearchTicket extends Component {
   searchDriverTicketId = async (values) => {
     try {
       const { data } = await this.driverTicketService.getIdDriverTicket(values)
-      this.setState({ driverTicketId: data.tickets[0].id })
+      this.setState({ driverTicketId: data.tickets[0].id, redirect: true })
     } catch (error) {
       console.log(error)
     }

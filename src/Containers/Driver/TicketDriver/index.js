@@ -4,8 +4,14 @@ import { TicketLogo } from '../../../assets'
 
 import './index.css'
 
-class TicketDriver extends Component {  
+class TicketDriver extends Component {
+  servicesType = {
+    loading: 'Carregar',
+    unload: 'Descarregar',
+    loading_unload: 'Carregar + Descarregar',
+  }
   render() {
+    const { driverTicket, handlePrint } = this.props
     return (
       <div className='content--main'>
         <div className='content-title--main'>
@@ -22,14 +28,28 @@ class TicketDriver extends Component {
           </div>
           <div className='card-content'>
             <h3>Ticket de Acesso</h3>
-            <QRCode size={160} value='Alexandre Santos' />
+            { driverTicket && driverTicket.id ?
+              <QRCode size={160} value={driverTicket.id} />
+              : null
+            }
           </div>
           <div className='card-header'>
-            <p>Nome <strong>Alexandre dos santos soares</strong></p>
-            <p>CPF <strong>222.333.444-45</strong></p>
-            <p>Veículo <strong>F4000 FORD PLH-2234</strong></p>
-            <p>Operação<strong>Hyundai do Brazil LTDA</strong></p>
-            <p className='noline-card-ticket-driver'>Tipo de Serviço<strong>Carregar</strong></p>
+            <p>Nome <strong>{driverTicket.driver.name}</strong></p>
+            <p>RG <strong>{driverTicket.driver.documentId}</strong></p>
+            <p>CPF <strong>{driverTicket.driver.cpf}</strong></p>
+            <p>Veículo 
+              <strong>
+              {driverTicket.vehicle.brand}&nbsp;&nbsp;
+              {driverTicket.vehicle.model} - {driverTicket.vehicle.plate}
+              </strong></p>
+            <p>Operação<strong>{driverTicket.operation.description}</strong></p>
+            <p className='noline-card-ticket-driver'>
+              Tipo de Serviço
+              <strong>
+              {
+                this.servicesType[driverTicket.service]
+              }
+              </strong></p>
           </div>
           <div className='rip'>
             <div className='line-dash'></div>
@@ -40,7 +60,7 @@ class TicketDriver extends Component {
           </div>
           <div className='content-footer--main'>
             <h6>Você pode apresentar o ticket pelo celular ou impresso</h6>
-            <button className='btn-default'>Salvar PDF</button>
+            <button className='btn-default' onClick={handlePrint}>Salvar PDF</button>
           </div>
         </div>
       </div>

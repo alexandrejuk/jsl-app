@@ -5,7 +5,23 @@ import DriverTicketService from '../../../services/driver'
 class TicketDriver extends Component {
   driverTicketService = null
   state = {
-    driverTicket: null,
+    driverTicket: {
+      driver: {
+        name: null,
+        documentId: null,
+        cpf: null,
+      },
+      vehicle: {
+        plate: null,
+        model: null,
+        brand: null,
+      },
+      service: null,
+      operation: {
+        description: null
+      },
+      id: null
+    },
     redirect: false
   }
   componentDidMount() {
@@ -23,10 +39,17 @@ class TicketDriver extends Component {
     }
   }
 
+  handlePrint = () => {
+    return window.print()
+  }
+
   render() { 
     const { driverTicket } = this.state
     return (
-      <TicketDriverContainer driverTicket={driverTicket}/>
+      <TicketDriverContainer 
+        driverTicket={driverTicket}
+        handlePrint={this.handlePrint}
+      />
     )
   }
 }
