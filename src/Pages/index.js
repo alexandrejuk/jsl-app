@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { Switch, Route, withRouter, Redirect } from 'react-router-dom'
 
 import Logged from './Logged'
 import Login from './Login'
+import Driver from './Driver'
 
 class Pages extends Component {
   state = {
@@ -34,6 +35,8 @@ class Pages extends Component {
       <Switch>
         <Route path='/logged' component={Logged}/>
         <Route path='/auth' component={Login}/>
+        <Route path='/driver' component={Driver}/>
+        <Redirect from='/' to='/auth' />
       </Switch>
     ) 
   } 
