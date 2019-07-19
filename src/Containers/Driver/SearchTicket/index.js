@@ -36,7 +36,7 @@ class SearchTicket extends Component {
             <input 
               className='formGroupSearchTicketInput' 
               type='text' 
-              placeholder='usuário' 
+              placeholder='insira o rg' 
               name='documentId'
               onChange={this.handlerChangeFormSearchTicket}
             />
