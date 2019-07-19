@@ -18,7 +18,7 @@ class SearchTicket extends Component {
   }
 
   handleClick = () => {
-    this.props.handleSearchTicket(this.state.documentId)
+    this.props.handleSearchTicket(this.state)
   }
 
   render() {
