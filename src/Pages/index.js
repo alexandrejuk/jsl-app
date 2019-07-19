@@ -25,7 +25,7 @@ class Pages extends Component {
       return 
     }
 
-    if (!token) {
+    if (!token && !pathname.indexOf('/driver')) {
       history.push('/auth')
     }
   }
