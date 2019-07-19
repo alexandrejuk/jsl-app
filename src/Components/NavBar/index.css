@@ -1,0 +1,47 @@
+.navBarMobileDocas {
+  height: 170px;
+  background: #ffffff;
+  border-bottom: 1px solid #e7e7e7;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+.navBarMobileDocas,
+.navBarMobileDocaHeaderInfo {
+  display: flex;
+}
+.navBarMobileDocaHeaderInfo {
+  justify-content: space-between;
+  color: #69696F;
+  text-align: center;
+}
+.navBarMobileDocas,
+.navBarMobileDocaHeaderInfoTitle {
+  color: #2B2B31;
+}
+.navBarMobileDocaHeaderInfoTitle {
+  margin: 0;
+  font-size: 2em;
+}
+.navBarMobileDocaHeaderInfoSubTitle {
+  font-family: arial;
+}
+.navBarMobileDocaHeadeIcon {
+  content: '';
+  border: 2px solid red;
+  display: block;
+  height: 2px;
+  width: 3px;
+  border-radius: 50%;
+  background: red;
+}
+
+.navBarMobileDocaHeadeIconSuccess {
+  color: #57EFAA;
+  background: #57EFAA;
+  border-color: #57EFAA;
+}
+.navBarMobileDocaHeadeIconDanger {
+  color: #F1603B;
+  background: #F1603B;
+  border-color: #F1603B;
+}
