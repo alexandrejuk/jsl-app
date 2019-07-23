@@ -16,7 +16,7 @@ class CardDoca extends Component {
 
   render() {
     const { doca } = this.props
-    const ticket = doca.tickets.find(ticket => ticket.status !== 'waiting_service' || ticket.status !== 'start_service')
+    const ticket = doca.tickets.find(ticket => ticket.status === 'waiting_service' || ticket.status === 'start_service')
     return (
       <Card className='cardDoca'>
         <a className='link-none-style' href={`#logged/docas/${doca.id}/qrcode`}>
