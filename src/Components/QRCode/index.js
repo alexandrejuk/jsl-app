@@ -5,6 +5,7 @@ class QRCode extends Component {
 
   handleScan = data => {
     if(data) {
+      console.log('dadsad')
       return this.props.handleUpdateTicketQRCode(data)
     }
   }

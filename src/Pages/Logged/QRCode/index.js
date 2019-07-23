@@ -7,12 +7,12 @@ class QRCode extends Component {
   state = { }
   
   componentDidMount() {
-    this.docaService = new TicketService()
+    this.ticketService = new TicketService()
   }
 
 
   handleUpdateTicketQRCode = async(id) => {
-    const docaId = this.props.match.params.id
+    const docaId = this.props.match.params.docaId
     try {
       await this.ticketService.updateTicket({ docaId, id })
       window.location.href = '/#/logged/docas'
