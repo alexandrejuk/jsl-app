@@ -14,7 +14,7 @@ class NavBar extends Component {
             <div>
               <span className='navBarMobileDocaHeadeIcon navBarMobileDocaHeadeIconSuccess'></span>
               <h1 className='navBarMobileDocaHeaderInfoTitle'>{docasAvailable}</h1>
-              <p className='navBarMobileDocaHeaderInfoSubTitle'>disponível</p>
+              <p className='navBarMobileDocaHeaderInfoSubTitle'>disponíveis</p>
             </div>
             <div>
               <span className='navBarMobileDocaHeadeIcon navBarMobileDocaHeadeIconDanger'></span>

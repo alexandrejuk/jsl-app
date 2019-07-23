@@ -19,7 +19,7 @@ class TicketDriver extends Component {
             <i className='fa fa-check' aria-hidden='true'></i>
           </div>
           <h2>Seu ticket de acesso!</h2>
-          <h4 className='ticket-accesso-title'>Agora vá até ao local reservado aos motoristas e apresente o Ticket de Acesso JSL Cross abaixo </h4>
+          <h4 className='ticket-accesso-title'>Agora vá ao local reservado aos motoristas e apresente o Ticket de Acesso JSL Cross abaixo </h4>
         </div>
         <div className='card-ticket'>
           <img className='logo' src={TicketLogo} alt='ticket logo' />
