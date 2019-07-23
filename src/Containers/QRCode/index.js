@@ -5,9 +5,10 @@ import { qrcode } from '../../assets'
 
 class QRCodeContainer extends Component {  
   render() {
+    const { handleUpdateTicketQRCode } = this.props
     return (
       <div className='qrcodeContainer'>
-        <QRCode />
+        <QRCode handleUpdateTicketQRCode={handleUpdateTicketQRCode} />
         <div className='qrcodeWrapper'>
           <div className='qrcodeImageExampleWrapper'>
             <img className='qrcodeImageExample' src={qrcode} alt='example qrcode' />
